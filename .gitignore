@@ -1,0 +1,10 @@
+node_modules
+proxy
+static
+webpack
+.babelrc
+env.js
+LICENSE
+server.js
+package-lock.json
+/src/vendor.js
