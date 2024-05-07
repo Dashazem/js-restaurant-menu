@@ -33,7 +33,7 @@ const getMealTime = () => {
 
 const userInput = prompt(`Welcome to our menu! Please choose a category:\n${Object.keys(menu.mainMenu).map(key => `• ${key}`).join('\n')}`, `${getMealTime()}`);
 
-if(userInput.toLowerCase() === "breakfast" || userInput.toLowerCase() === "lunch" || userInput.toLowerCase() === "dinner"){
+if(userInput.toLowerCase() && menu.mainMenu[userInput.toLowerCase()]){
   const subMenu = menu.mainMenu[userInput.toLowerCase()];
 
   const entree = prompt(`This is our ${userInput.toLowerCase()} menu.\nEntrees:\n${Object.keys(subMenu).map(key => `• ${key} - $${subMenu[key].price}`).join('\n')}\nSide dishes:\n${Object.keys(menu.sidesMenu).map(key => `• ${key} - $${menu.sidesMenu[key].price}`).join('\n')}\n\nTo start your order, please choose an entree for your ${userInput}.`);
